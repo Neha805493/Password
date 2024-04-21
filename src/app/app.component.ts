@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'password-manager';
+  constructor(private router: Router) {}
+  navigateToPasswords() {
+    this.router.navigateByUrl('/passwords');
+  }
 }
